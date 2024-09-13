@@ -1,6 +1,8 @@
+import Experience from "@/components/Experience"
+
 const Resume = () => {
   return (
-    <div>resume-page</div>
+    <Experience />
   )
 }
 
