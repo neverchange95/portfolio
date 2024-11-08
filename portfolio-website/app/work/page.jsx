@@ -135,6 +135,7 @@ const Work = () => {
                     <div className="relative w-full h-full">
                       <Image
                         src={project.image}
+                        sizes="max-width: 100%"
                         fill
                         className="object-cover"
                         alt=""
