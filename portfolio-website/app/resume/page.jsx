@@ -24,7 +24,7 @@ import { motion } from "framer-motion"
 
 // about data
 const about = {
-  title: "About me",
+  title: "Über mich",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
   info: [
     {
@@ -32,71 +32,68 @@ const about = {
       fieldValue: "Michael Küchenmeister"
     },
     {
-      fieldName: "Phone",
-      fieldValue: "(+40) 321 654 678"
+      fieldName: "Wohnort",
+      fieldValue: "Ingolstadt"
     },
     {
-      fieldName: "Experience",
-      fieldValue: "1+ Years"
+      fieldName: "Berufserfahrung",
+      fieldValue: "2+ Years"
     },
     {
       fieldName: "Github",
       fieldValue: "neverchange95"
     },
     {
-      fieldName: "Nationality",
-      fieldValue: "deutsch"
+      fieldName: "Spachen",
+      fieldValue: "Deutsch, Englisch"
     },
     {
       fieldName: "Email",
       fieldValue: "michaelkuechenmeister95@googlemail.com"
     },
-    {
-      fieldName: "Freelance",
-      fieldValue: "Aviable"
-    },
-    {
-      fieldName: "Languages",
-      fieldValue: "English, German"
-    }
   ]
 }
 
 // experience data
 const experience = {
   icon: "",
-  title: "My experience",
+  title: "Meine Berufserfahrung",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
   items: [
     {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present"
+      company: "EDAG Group",
+      position: "Softwareentwickler (Teilzeit)",
+      duration: "Okt. 2023 - Heute"
+    },
+    {
+      company: "EDAG Group",
+      position: "Softwareentwickler (Vollzeit)",
+      duration: "Jan. 2023 - Okt. 2023"
     },
     {
       company: "Audi AG",
-      position: "Praktikant",
-      duration: "2020 - 2022"
+      position: "Bachelorarbeit (Freiberuflich)",
+      duration: "Feb. 2022 - Aug. 2022"
     },
     {
-      company: "EDAG Engineering",
-      position: "Full Stack Developer",
-      duration: "2018 - 2022"
+      company: "Audi AG",
+      position: "Identity and Access Management (Praktikum)",
+      duration: "Aug. 2021 - Jan. 2022"
     },
     {
-      company: "Don't Know",
-      position: "IT-Security Specialist",
-      duration: "2017 - 2018"
+      company: "ALDI SÜD",
+      position: "Logistikmitarbeiter (Weksstudent)",
+      duration: "März 2020 - Sep. 2020"
     },
     {
-      company: "Wunderbar GmbH",
-      position: "Werksstudent",
-      duration: "2014 - 2017"
+      company: "Klosterschenke Weltenburg",
+      position: "Servicekraft im Gastgewerbe",
+      duration: "Apr. 2017 - Sep. 2017"
     },
     {
-      company: "BlaBliBlub Firma",
-      position: "Kaufmann für Bürokommunikation",
-      duration: "2012 - 2014"
+      company: "Evang. Gesamtkirchenverwaltung",
+      position: "Kaufm. f. Büromanagement (Ausbildung)",
+      duration: "Sep. 2013 - Aug. 2016"
     },
   ]
 }
@@ -104,7 +101,7 @@ const experience = {
 // education data
 const education = {
   icon: "",
-  title: "My education",
+  title: "Meine Ausbildung",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
   items: [
     {
@@ -142,7 +139,7 @@ const education = {
 
 // skills data
 const skills = {
-  title: "My skills",
+  title: "Meine Skills",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
   skillList: [
     {
@@ -196,10 +193,10 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"  
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="experience">Berufserfahrung</TabsTrigger>
+            <TabsTrigger value="education">Ausbildung</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="about">Über mich</TabsTrigger>
           </TabsList>
 
           {/* content  */}
