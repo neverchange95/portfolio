@@ -12,11 +12,11 @@ const stats = [
         text: "Jahre theoretische Ausbildung"
     },
     {
-        num: 8,
-        text: "Vertraute technologien"
+        num: 16,
+        text: "Vertraute Technologien"
     },
     {
-        num: 8,
+        num: 10,
         text: "Studien-/Privatprojekte umgesetzt"
     },
 ];

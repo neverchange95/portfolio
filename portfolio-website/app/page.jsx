@@ -16,7 +16,7 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer & Master Student</span>
+            <span className="text-xl">Softwareentwickler & Masterstudent</span>
             <h1 className="h1 mb-6">
               Hi 🙋‍♂️, ich bin <br /> 
               <TypeAnimation
@@ -31,9 +31,9 @@ const Home = () => {
               />
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-              sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-              magna aliquyam
+              Softwareentwickler bei der EDAG Group in Ingolstadt sowie
+              Masterstudent im Studiengang Cloud Applications & Security Engineering
+              an der Technischen Hochschule in Ingolstadt.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">

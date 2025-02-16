@@ -21,22 +21,92 @@ const projects = [
   {
     num: "01",
     category: "frontend",
-    title: "project 1",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/projects/portfolio.png",
+    title: "portfolio 1",
+    description: "Eine Portfolio Website über meine Person. ",
+    stack: [{ name: "Next.js" }, { name: "Tailwind CSS" }, { name: "Framer Motion" }],
+    image: "/assets/projects/portfolio-1.png",
     live: "",
-    github: "",
+    github: "https://github.com/neverchange95/portfolio",
   },
   {
     num: "02",
     category: "fullstack",
-    title: "project 2",
+    title: "Supermarket Scout",
+    description: "Ein Cloud-native Studienprojekt, indem Mircoservices umgesetzt wurden, die Backendservices innerhalb eines Kubernetes Clusters für eine Webanwendung bereitstellen. Die Anwendung ermöglicht es nach Produktpreisen von den umliegenden Supermärkten in einer Stadt zu suchen.",
+    stack: [{ name: "Springboot" }, { name: "Postgresql" }, { name: "Python" }, { name: "Next.js" }, { name: "Docker" }, { name: "Kubernetes/Helm" }, { name: "CI/CD" }],
+    image: "/assets/projects/supermarket-scout.png",
+    live: "",
+    github: "https://github.com/neverchange95/supermarket-scout",
+  },
+  {
+    num: "03",
+    category: "fullstack",
+    title: "bgp-routing-looking-glass",
     description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
-    stack: [{ name: "Next.js5" }, { name: "Tailwind.css" }, { name: "Node.js" }],
+    stack: [{ name: "React.js" }, { name: "CSS 3" }, { name: "Python" }, { name: "Spark" }],
     image: "/assets/projects/bgp.png",
     live: "",
-    github: "",
+    github: "https://github.com/neverchange95/bgp-routing-looking-glass",
+  },
+  {
+    num: "04",
+    category: "UI/UX-design",
+    title: "smart-home",
+    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    stack: [{ name: "Figma" }],
+    image: "/assets/projects/smart-home.jpg",
+    live: "",
+    github: "https://github.com/neverchange95/smart-home",
+  },
+  {
+    num: "05",
+    category: "frontend",
+    title: "portfolio 2",
+    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "Java Script" }],
+    image: "/assets/projects/portfolio.png",
+    live: "",
+    github: "https://github.com/neverchange95/MyWebsite",
+  },
+  {
+    num: "06",
+    category: "Frontend",
+    title: "dfs/bfs",
+    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    stack: [{ name: "HTML 5" }, { name: "CSS 3" }, { name: "JavaScript" }],
+    image: "/assets/projects/dfs-bfs.png",
+    live: "",
+    github: "https://github.com/neverchange95/VisualSearch",
+  },
+  {
+    num: "07",
+    category: "Android App",
+    title: "dfs/bfs",
+    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    stack: [{ name: "Java" }, { name: "Android Studio" }, { name: "SQL" }],
+    image: "/assets/projects/todo.jpg",
+    live: "",
+    github: "https://github.com/neverchange95/ToDoApp",
+  },
+  {
+    num: "08",
+    category: "Security",
+    title: "rootkit",
+    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    stack: [{ name: "C" }, { name: "Linux Kernel" }],
+    image: "/assets/projects/rootkit.png",
+    live: "",
+    github: "https://github.com/neverchange95/Rootkit",
+  },
+  {
+    num: "09",
+    category: "Fullstack",
+    title: "webauthn",
+    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    stack: [{ name: "React.js" }, { name: "Spring Boot" }, { name: "FIDO 2" }, { name: "Webauthn" }],
+    image: "/assets/projects/webauthn.png",
+    live: "",
+    github: "https://github.com/neverchange95/WebAuthnDemo",
   },
 ];
 
@@ -75,7 +145,7 @@ const Work = () => {
               {/* project description */}
               <p className="text-white/60">{project.description}</p>
               {/* stack */}
-              <ul className="flex gap-4">
+              <ul className="flex flex-wrap gap-4">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">
@@ -91,20 +161,22 @@ const Work = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent"/>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+                {project.live && (
+                  <Link href={project.live}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent"/>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Live project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
                 {/* github project button */}
-                <Link href={project.github}>
+                <Link href={project.github} target="_blank" rel="noopener noreferrer">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -137,7 +209,8 @@ const Work = () => {
                         src={project.image}
                         sizes="max-width: 100%"
                         fill
-                        className="object-cover"
+                        className="object-contain"
+                        style={{ backgroundColor: "#1c1c23" }}
                         alt=""
                       />
                     </div>

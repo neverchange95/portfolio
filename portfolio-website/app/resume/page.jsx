@@ -6,12 +6,21 @@ import {
   FaJs,
   FaReact,
   FaFigma,
-  FaNodeJs
+  FaNodeJs,
+  FaJava,
+  FaPython
 } from "react-icons/fa"
 
 import {
   SiTailwindcss,
-  SiNextdotjs
+  SiNextdotjs,
+  SiSpringboot,
+  SiNestjs,
+  SiKubernetes,
+  SiDocker,
+  SiPostgresql,
+  SiLinux,
+  SiC
 } from "react-icons/si"
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -25,7 +34,7 @@ import { motion } from "framer-motion"
 // about data
 const about = {
   title: "Über mich",
-  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+  description: "In diesem Abschnitt finden Sie  allgemeine Informationen über meine Person.",
   info: [
     {
       fieldName: "Name",
@@ -58,7 +67,7 @@ const about = {
 const experience = {
   icon: "",
   title: "Meine Berufserfahrung",
-  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+  description: "In diesem Abschnitt erfahren Sie mehr über meine berufliche Laufbahn.",
   items: [
     {
       company: "EDAG Group",
@@ -102,37 +111,32 @@ const experience = {
 const education = {
   icon: "",
   title: "Meine Ausbildung",
-  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+  description: "In diesem Abschnitt erfahren Sie mehr über meine Ausbildungslaufbahn.",
   items: [
     {
-      insitution: "Online Course Platform",
-      degree: "Full Stack Development Bootcamp",
-      duration: "2023"
-    },
-    {
-      insitution: "Codecademy",
-      degree: "Front-end Track",
-      duration: "2022"
+      insitution: "Technische Hochschule Ingolstadt",
+      degree: "Master in Cloud App. & Security Engineering",
+      duration: "Okt. 2023 - Heute"
     },
     {
       insitution: "Technische Hochschule Ingolstadt",
-      degree: "Informatik Master",
-      duration: "2020 - 2022"
-    },
-    {
-      insitution: "Technische Hochschule Ingolstadt",
-      degree: "Informatik Bachelor",
-      duration: "2018 - 2020"
+      degree: "Bachelor in Informatik",
+      duration: "Okt. 2018 - Nov. 2022"
     },
     {
       insitution: "Staatliche Berufsoberschule Ingolstadt",
       degree: "Fachabitur Wirtschaft und Verwaltung",
-      duration: "2016 - 2018"
+      duration: "Sep. 2016 - Aug. 2018"
+    },
+    {
+      insitution: "Leo von Klenze Berufsschule",
+      degree: "Ausbildung Kaufm f. Büromanagement",
+      duration: "Sep. 2013 - Aug. 2016"
     },
     {
       insitution: "Wirtschaftsschule Ingolstadt",
       degree: "Mittlere Reife",
-      duration: "2012 - 2016"
+      duration: "Sep. 2010 - Aug. 2013"
     },
   ]
 }
@@ -140,7 +144,7 @@ const education = {
 // skills data
 const skills = {
   title: "Meine Skills",
-  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+  description: "In diesem Abschnitt finden Sie die Technologien mit denen ich Erfahrungen im beruflichen, studentischen oder privaten Umfeld gesammelt habe.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -163,8 +167,8 @@ const skills = {
       name: "next,js",
     },
     {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css",
+      icon: <SiNestjs />,
+      name: "nest,js",
     },
     {
       icon: <FaNodeJs />,
@@ -173,6 +177,38 @@ const skills = {
     {
       icon: <FaFigma />,
       name: "figma",
+    },
+    {
+      icon: <FaJava />,
+      name: "java",
+    },
+    {
+      icon: <SiSpringboot />,
+      name: "springboot",
+    },
+    {
+      icon: <SiC />,
+      name: "C",
+    },
+    {
+      icon: <FaPython />,
+      name: "python",
+    },
+    {
+      icon: <SiKubernetes />,
+      name: "kubernetes",
+    },
+    {
+      icon: <SiDocker />,
+      name: "docker",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "postgresql",
+    },
+    {
+      icon: <SiLinux />,
+      name: "linux",
     },
   ]
 }
