@@ -164,11 +164,11 @@ const skills = {
     },
     {
       icon: <SiNextdotjs />,
-      name: "next,js",
+      name: "next.js",
     },
     {
       icon: <SiNestjs />,
-      name: "nest,js",
+      name: "nest.js",
     },
     {
       icon: <FaNodeJs />,

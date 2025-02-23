@@ -18,7 +18,7 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Softwareentwickler & Masterstudent</span>
             <h1 className="h1 mb-6">
-              Hi 🙋‍♂️, ich bin <br /> 
+              Hi 👋, ich bin <br /> 
               <TypeAnimation
                 sequence={[
                   "", 1500,

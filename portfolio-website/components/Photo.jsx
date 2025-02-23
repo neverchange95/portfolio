@@ -20,11 +20,11 @@ const Photo = () => {
                         opacity: 1,
                         transition: { delay: 2.4, duration: 0.4, ease: 'easeInOut' },
                     }}
-                    className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+                    className="w-[298px] h-[330px] xl:w-[498px] xl:h-[535px] mix-blend-lighten absolute"
                     style={{ transform: "translateY(-15px)" }}
                 >
                     <Image 
-                        src="/assets/me_hd_rounded.png"
+                        src="/assets/me_cartoon.png"
                         priority
                         quality={100}
                         fill
