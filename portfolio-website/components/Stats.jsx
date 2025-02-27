@@ -5,19 +5,19 @@ import CountUp from "react-countup";
 const stats = [
     {
         num: 2,
-        text: "Jahre Berufserfahrung"
+        text: "Years professional experience"
     },
     {
         num: 5,
-        text: "Jahre theoretische Ausbildung"
+        text: "Years Education"
     },
     {
         num: 16,
-        text: "Vertraute Technologien"
+        text: "Familiar technologies"
     },
     {
-        num: 10,
-        text: "Studien-/Privatprojekte umgesetzt"
+        num: 8,
+        text: "Study/private projects completed"
     },
 ];
 

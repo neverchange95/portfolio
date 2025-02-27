@@ -12,7 +12,6 @@ import {
 } from "react-icons/fa"
 
 import {
-  SiTailwindcss,
   SiNextdotjs,
   SiSpringboot,
   SiNestjs,
@@ -33,19 +32,19 @@ import { motion } from "framer-motion"
 
 // about data
 const about = {
-  title: "Über mich",
-  description: "In diesem Abschnitt finden Sie  allgemeine Informationen über meine Person.",
+  title: "About me",
+  description: "This section provides general information about me.",
   info: [
     {
       fieldName: "Name",
       fieldValue: "Michael Küchenmeister"
     },
     {
-      fieldName: "Wohnort",
+      fieldName: "Place of residence",
       fieldValue: "Ingolstadt"
     },
     {
-      fieldName: "Berufserfahrung",
+      fieldName: "Professional experience",
       fieldValue: "2+ Years"
     },
     {
@@ -53,12 +52,12 @@ const about = {
       fieldValue: "neverchange95"
     },
     {
-      fieldName: "Spachen",
-      fieldValue: "Deutsch, Englisch"
+      fieldName: "Languages",
+      fieldValue: "German, English"
     },
     {
       fieldName: "Email",
-      fieldValue: "michaelkuechenmeister95@googlemail.com"
+      fieldValue: "contact.mkue@gmail.com"
     },
   ]
 }
@@ -66,42 +65,42 @@ const about = {
 // experience data
 const experience = {
   icon: "",
-  title: "Meine Berufserfahrung",
-  description: "In diesem Abschnitt erfahren Sie mehr über meine berufliche Laufbahn.",
+  title: "My Experience",
+  description: "In this section, you will discover more about my professional career.",
   items: [
     {
       company: "EDAG Group",
-      position: "Softwareentwickler (Teilzeit)",
-      duration: "Okt. 2023 - Heute"
+      position: "Software Developer (part time)",
+      duration: "Oct. 2023 - Today"
     },
     {
       company: "EDAG Group",
-      position: "Softwareentwickler (Vollzeit)",
-      duration: "Jan. 2023 - Okt. 2023"
+      position: "Software Developer (full time)",
+      duration: "Jan. 2023 - Oct. 2023"
     },
     {
       company: "Audi AG",
-      position: "Bachelorarbeit (Freiberuflich)",
+      position: "Bachelor thesis",
       duration: "Feb. 2022 - Aug. 2022"
     },
     {
       company: "Audi AG",
-      position: "Identity and Access Management (Praktikum)",
+      position: "Identity and Access Management (internship)",
       duration: "Aug. 2021 - Jan. 2022"
     },
     {
       company: "ALDI SÜD",
-      position: "Logistikmitarbeiter (Weksstudent)",
-      duration: "März 2020 - Sep. 2020"
+      position: "Logistic collaboration (working student)",
+      duration: "Mar. 2020 - Sep. 2020"
     },
     {
       company: "Klosterschenke Weltenburg",
-      position: "Servicekraft im Gastgewerbe",
+      position: "Waitress for the catering",
       duration: "Apr. 2017 - Sep. 2017"
     },
     {
       company: "Evang. Gesamtkirchenverwaltung",
-      position: "Kaufm. f. Büromanagement (Ausbildung)",
+      position: "Management Assistant for Office Communication (vocational training)",
       duration: "Sep. 2013 - Aug. 2016"
     },
   ]
@@ -110,32 +109,32 @@ const experience = {
 // education data
 const education = {
   icon: "",
-  title: "Meine Ausbildung",
-  description: "In diesem Abschnitt erfahren Sie mehr über meine Ausbildungslaufbahn.",
+  title: "My Education",
+  description: "In this section, you will discover more about my education.",
   items: [
     {
       insitution: "Technische Hochschule Ingolstadt",
-      degree: "Master in Cloud App. & Security Engineering",
-      duration: "Okt. 2023 - Heute"
+      degree: "M.Sc. Cloud Applications & Security Engineering",
+      duration: "Oct. 2023 - Today"
     },
     {
       insitution: "Technische Hochschule Ingolstadt",
-      degree: "Bachelor in Informatik",
-      duration: "Okt. 2018 - Nov. 2022"
+      degree: "B.Sc. Computer Sience",
+      duration: "Oct. 2018 - Nov. 2022"
     },
     {
-      insitution: "Staatliche Berufsoberschule Ingolstadt",
-      degree: "Fachabitur Wirtschaft und Verwaltung",
+      insitution: "Staatliche Berufsoberschule",
+      degree: "Vocational baccalaureate diploma in economics",
       duration: "Sep. 2016 - Aug. 2018"
     },
     {
       insitution: "Leo von Klenze Berufsschule",
-      degree: "Ausbildung Kaufm f. Büromanagement",
+      degree: "Management Assistant for Office Communication (vocational training)",
       duration: "Sep. 2013 - Aug. 2016"
     },
     {
       insitution: "Wirtschaftsschule Ingolstadt",
-      degree: "Mittlere Reife",
+      degree: "Intermediate secondary school leaving certificate",
       duration: "Sep. 2010 - Aug. 2013"
     },
   ]
@@ -143,8 +142,8 @@ const education = {
 
 // skills data
 const skills = {
-  title: "Meine Skills",
-  description: "In diesem Abschnitt finden Sie die Technologien mit denen ich Erfahrungen im beruflichen, studentischen oder privaten Umfeld gesammelt habe.",
+  title: "My Skills",
+  description: "This section highlights the technologies I have gained experience with in professional, academic, and personal settings.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -229,10 +228,10 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"  
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Berufserfahrung</TabsTrigger>
-            <TabsTrigger value="education">Ausbildung</TabsTrigger>
+            <TabsTrigger value="experience">Experience</TabsTrigger>
+            <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">Über mich</TabsTrigger>
+            <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
 
           {/* content  */}
@@ -254,7 +253,7 @@ const Resume = () => {
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
-                          <div className="flex items-center gap-3">
+                          <div className="flex items-center gap-3 mt-5">
                             {/* dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.company}</p>
@@ -283,7 +282,7 @@ const Resume = () => {
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
-                          <div className="flex items-center gap-3">
+                          <div className="flex items-center gap-3 mt-5">
                             {/* dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.insitution}</p>

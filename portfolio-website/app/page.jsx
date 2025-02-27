@@ -10,18 +10,27 @@ import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
 const Home = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/cv.pdf";
+    link.download = "CV_Michael_Küchenmeister.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Softwareentwickler & Masterstudent</span>
+            <span className="text-xl">Software Developer & M.Sc. student</span>
             <h1 className="h1 mb-6">
-              Hi 👋, ich bin <br /> 
+              Hi 👋, I am <br /> 
               <TypeAnimation
                 sequence={[
-                  "", 1500,
+                  "", 3000,
                   "Michael Küchenmeister", 1000,
                 ]}
                 wrapper="span"
@@ -31,9 +40,8 @@ const Home = () => {
               />
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Softwareentwickler bei der EDAG Group in Ingolstadt sowie
-              Masterstudent im Studiengang Cloud Applications & Security Engineering
-              an der Technischen Hochschule in Ingolstadt.
+              Software Developer at EDAG Group in Ingolstadt and M.Sc. student 
+              in Cloud Applications & Security Engineering at Technische Hochschule Ingolstadt.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -41,6 +49,7 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
+                onClick={handleDownload}
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl"/>
