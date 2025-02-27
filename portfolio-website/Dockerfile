@@ -21,8 +21,9 @@ COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
 
 # Public build-time environment variables
-ARG NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-ENV NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=$NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+ENV NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_7mj9f9o
+ENV NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=template_pi6jlfr
+ENV NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=uOet6nj95l-tqSZkR
 
 RUN npm run build
 
