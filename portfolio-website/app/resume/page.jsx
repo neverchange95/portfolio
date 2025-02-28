@@ -95,7 +95,7 @@ const experience = {
     },
     {
       company: "Klosterschenke Weltenburg",
-      position: "Waitress for the catering",
+      position: "Waiter for the catering",
       duration: "Apr. 2017 - Sep. 2017"
     },
     {
