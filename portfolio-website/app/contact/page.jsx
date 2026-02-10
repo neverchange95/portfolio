@@ -5,15 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import emailjs from '@emailjs/browser';
 import { toast } from "react-toastify";
-import { 
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue
-} from "@/components/ui/select";
 
 import { FaEnvelope, FaMapMarkedAlt  } from "react-icons/fa"
 import { motion } from "framer-motion";
@@ -28,7 +19,7 @@ const info = [
   {
     icon: <FaMapMarkedAlt />,
     title: "Place of residence",
-    description: "Ingolstadt, Bayern, Deutschland",
+    description: "Ingolstadt, Bavaria, Germany",
   },
 ]
 
@@ -38,7 +29,6 @@ const Contact = () => {
     lastname: '',
     email: '',
     phone: '',
-    category: '',
     message: ''
   });
 
@@ -47,12 +37,12 @@ const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSelectChange = (value) => {
-    setFormData({...formData, category: value});
-  };
+  const [isSending, setIsSending] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (isSending) return;
 
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
@@ -61,39 +51,42 @@ const Contact = () => {
     if(formData.firstname === '' ||
        formData.lastname === '' ||
        formData.email === '' ||
-       formData.phone === '' ||
-       formData.category === '' ||
        formData.message === ''
     ) {
       toast.error("Please fill out all form fields!");
-    } else {
-      try {
-        const emailParams = {
-          firstname: formData.firstname,
-          lastname: formData.lastname,
-          email: formData.email,
-          phone: formData.phone,
-          category: formData.category,
-          message: formData.message
-        };
+      return;
+    } 
+    
+    setIsSending(true);
 
-        const res = await emailjs.send(serviceId, templateId, emailParams, userId);
+    try {
+      const emailParams = {
+        firstname: formData.firstname,
+        lastname: formData.lastname,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message
+      };
 
-        if(res.status === 200) {
-          toast.success("Thank you! Your message has been successfully submitted. I will get back to you as soon as possible.")
-          
-          setFormData({
-            firstname: '',
-            lastname: '',
-            email: '',
-            phone: '',
-            category: '',
-            message: ''
-          })
-        }
-      } catch(error) {
+      const res = await emailjs.send(serviceId, templateId, emailParams, userId);
+
+      if(res?.status === 200) {
+        toast.success("Thank you! Your message has been successfully submitted. I will get back to you as soon as possible.")
+        
+        setFormData({
+          firstname: '',
+          lastname: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+      } else {
         toast.error("Your request could not be submitted. Please try again later.")
       }
+    } catch(error) {
+      toast.error("Your request could not be submitted. Please try again later.")
+    } finally {
+      setIsSending(false);
     }
   }
 
@@ -113,32 +106,16 @@ const Contact = () => {
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl" onSubmit={handleSubmit}>
               <h3 className="text-4xl text-accent">Contact me</h3>
               <p className="text-white/60">
-              Are you interested in a collaboration?<br></br>
-              Feel free to send me an inquiry, and I will get back to you as soon as possible!
+              You want to contact me?<br></br>
+              Feel free to send me an email, and I will get back to you as soon as possible!
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="text" name="firstname" placeholder="Firstname" value={formData.firstname} onChange={handleChange}/>
                 <Input type="text" name="lastname" placeholder="Lastname" value={formData.lastname} onChange={handleChange}/>
                 <Input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange}/>
-                <Input type="tel" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange}/>
+                <Input type="tel" name="phone" placeholder="Phone (optional)" value={formData.phone} onChange={handleChange}/>
               </div>
-              {/* select */}
-              <Select onValueChange={handleSelectChange}>
-                <SelectTrigger className="w-full ">
-                  <SelectValue placeholder="Choose a service" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Choose a service</SelectLabel>
-                    <SelectItem value="web">Web Development</SelectItem>
-                    <SelectItem value="backend">Backend Development</SelectItem>
-                    <SelectItem value="cloud">Cloud Development</SelectItem>
-                    <SelectItem value="security">Security</SelectItem>
-                    <SelectItem value="uxi">UI/UX Design</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
               {/* textarea */}
               <Textarea 
                 className="h-[200px]"
@@ -148,8 +125,8 @@ const Contact = () => {
                 onChange={handleChange}
               />
               {/* btn */}
-              <Button size="md" className="max-w-40" type="submit">
-                Send
+              <Button size="md" className="max-w-40" type="submit" disabled={isSending} aria-busy={isSending}>
+                {isSending ? "Sending..." : "Send"}
               </Button>
             </form>
           </div>

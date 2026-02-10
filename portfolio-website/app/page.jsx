@@ -12,7 +12,7 @@ import Stats from "@/components/Stats";
 const Home = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/cv.pdf";
+    link.href = "/CV_Michael_Kuechenmeister.pdf";
     link.download = "CV_Michael_Küchenmeister.pdf";
     document.body.appendChild(link);
     link.click();
@@ -25,7 +25,7 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer & M.Sc. student</span>
+            <span className="text-xl">Software Engineer & M.Sc. Graduate</span>
             <h1 className="h1 mb-6">
               Hi 👋, I am <br /> 
               <TypeAnimation
@@ -40,8 +40,11 @@ const Home = () => {
               />
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Software Developer at EDAG Group in Ingolstadt and M.Sc. student 
-              in Cloud Applications & Security Engineering at Technische Hochschule Ingolstadt.
+              I’m a Software Engineer at EDAG Group and hold a Master’s degree in 
+              Cloud Applications & Security Engineering from Technische Hochschule 
+              Ingolstadt. I’m particularly interested in cybersecurity and enjoy 
+              working at the intersection of modern software development, artificial 
+              intelligence, cloud technologies, and security.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
