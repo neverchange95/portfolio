@@ -16,7 +16,7 @@ const about = {
     },
     {
       fieldName: "Github",
-      fieldValue: "neverchange95"
+      fieldValue: "0x6d696b"
     },
     {
       fieldName: "Languages",

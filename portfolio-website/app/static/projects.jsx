@@ -7,7 +7,7 @@ const projects = [
     stack: [{ name: "Keras" }, { name: "scikit-learn" }, { name: "python" }, { name: "Jupyter Notebook"}, { name: "Google Safe Browsing API"}, { name: "ChatGPT" }],
     image: "/assets/projects/phishing.png",
     live: "",
-    github: "https://github.com/neverchange95/phishing-detection",
+    github: "https://github.com/0x6d696b/phishing-detection",
   },
   {
     num: "02",
@@ -17,7 +17,7 @@ const projects = [
     stack: [{ name: "Spring Boot" }, { name: "PostgreSQL" }, { name: "python" }, { name: "Next.js" }, { name: "Tailwind CSS" }, { name: "Docker" }, { name: "Kubernetes/Helm" }, { name: "Github Actions" }],
     image: "/assets/projects/supermarket-scout.png",
     live: "",
-    github: "https://github.com/neverchange95/supermarket-scout",
+    github: "https://github.com/0x6d696b/supermarket-scout",
   },
   {
     num: "03",
@@ -27,17 +27,17 @@ const projects = [
     stack: [{ name: "React" }, { name: "CSS3" }, { name: "python" }, { name: "Apache Spark" }, { name: "BGP" }],
     image: "/assets/projects/bgp.png",
     live: "",
-    github: "https://github.com/neverchange95/bgp-routing-looking-glass",
+    github: "https://github.com/0x6d696b/bgp-routing-looking-glass",
   },
   {
     num: "04",
     category: "Fullstack, Authentication Security",
     title: "webauthn",
     description: "Example application that walks through the registration and authentication phases of the WebAuthn standard, visualizing the exchanged and generated values, to examine practical behavior and operational limitations.",
-    stack: [{ name: "React.js" }, { name: "Spring Boot" }, { name: "FIDO 2" }, { name: "WebAuthn" }],
+    stack: [{ name: "React" }, { name: "Spring Boot" }, { name: "FIDO 2" }, { name: "WebAuthn" }],
     image: "/assets/projects/webauthn.png",
     live: "",
-    github: "https://github.com/neverchange95/WebAuthnDemo",
+    github: "https://github.com/0x6d696b/WebAuthnDemo",
   },
   {
     num: "05",
@@ -47,7 +47,7 @@ const projects = [
     stack: [{ name: "Next.js" }],
     image: "/assets/projects/portfolio_new.png",
     live: "http://michael-kuechenmeister.de/",
-    github: "https://github.com/neverchange95/portfolio",
+    github: "https://github.com/0x6d696b/portfolio",
   },
   {
     num: "06",
@@ -57,7 +57,7 @@ const projects = [
     stack: [{ name: "HTML5" }, { name: "CSS3" }, { name: "JavaScript" }],
     image: "/assets/projects/portfolio.png",
     live: "",
-    github: "https://github.com/neverchange95/MyWebsite",
+    github: "https://github.com/0x6d696b/MyWebsite",
   },
   {
     num: "07",
@@ -67,7 +67,7 @@ const projects = [
     stack: [{ name: "HTML5" }, { name: "CSS3" }, { name: "JavaScript" }],
     image: "/assets/projects/dfs-bfs.png",
     live: "",
-    github: "https://github.com/neverchange95/VisualSearch",
+    github: "https://github.com/0x6d696b/VisualSearch",
   },
   {
     num: "08",
@@ -77,7 +77,7 @@ const projects = [
     stack: [{ name: "Figma" }],
     image: "/assets/projects/smart-home.jpg",
     live: "",
-    github: "https://github.com/neverchange95/smart-home",
+    github: "https://github.com/0x6d696b/smart-home",
   },
   {
     num: "09",
@@ -87,7 +87,7 @@ const projects = [
     stack: [{ name: "Java" }, { name: "Android Studio" }, { name: "SQL" }],
     image: "/assets/projects/todo.jpg",
     live: "",
-    github: "https://github.com/neverchange95/ToDoApp",
+    github: "https://github.com/0x6d696b/ToDoApp",
   },
   {
     num: "10",
@@ -97,17 +97,17 @@ const projects = [
     stack: [{ name: "C" }, { name: "Linux Kernel" }],
     image: "/assets/projects/rootkit.png",
     live: "",
-    github: "https://github.com/neverchange95/Rootkit",
+    github: "https://github.com/0x6d696b/Rootkit",
   },
   {
     num: "11",
     category: "Java Application",
     title: "dronesimulation",
-    description: "A student project that implements a realistic drone simulation and visualizes it via a GUI.",
+    description: "A study project that implements a realistic drone simulation and visualizes it via a GUI.",
     stack: [{ name: "Java" }, { name: "Maven" }],
     image: "/assets/projects/drone.png",
     live: "",
-    github: "https://github.com/neverchange95/Drohnensimulation",
+    github: "https://github.com/0x6d696b/Drohnensimulation",
   },
 ];
 
